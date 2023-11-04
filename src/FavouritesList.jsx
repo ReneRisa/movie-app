@@ -5,7 +5,8 @@ function FavouritesList(props) {
             <h2>My Favourite Movies</h2>
             <ul>
                 {props.favourites.map((movie) => (
-                    <FavouriteMovie key={movie.imdbID} movie={movie} />
+                    <FavouriteMovie key={movie.imdbID} movie={movie}
+                    removeFavourite={props.removeFavourite} />
                 ))}
                 
             </ul>
