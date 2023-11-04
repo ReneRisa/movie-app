@@ -6,20 +6,22 @@ function MovieModal(props) {
             isOpen={props.isModalOpen}
             onRequestClose={props.closeModal}
             contentLabel={props.movie.Title}
+            className='modal'
+            overlayClassName='modal-overlay'
         >
-            <div>
-                <span onClick={props.closeModal}>
+            <div className='modal-content'>
+                <span onClick={props.closeModal} className='close'>
                     &times;
                 </span>
                 
-                <div>
+                <div className='modal-header'>
                      <img src={props.movie.Poster} alt={props.movie.Title} />
-                     <div>
+                     <div className='modal-title'>
                         <h3>{props.movie.Title}</h3>
                         <p>{props.movie.Year}</p>
                     </div> 
                 </div>
-                <div>
+                <div className='modal-body'>
                     <p>
                         <strong>Genre:</strong> {props.movie.Genre}
                     </p>

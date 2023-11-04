@@ -1,10 +1,10 @@
 import FavouriteMovie from "./FavouriteMovie"
 function FavouritesList(props) {
     return (
-        <div>
+        <div className="favourites-container">
             <h2>My Favourite Movies</h2>
             {props.favourites.length > 0? (
-            <ul>
+            <ul className="favourites-list">
                 {props.favourites.map((movie) => (
                     <FavouriteMovie key={movie.imdbID} movie={movie}
                     removeFavourite={props.removeFavourite}
