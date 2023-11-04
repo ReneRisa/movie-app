@@ -7,7 +7,9 @@ function FavouritesList(props) {
             <ul>
                 {props.favourites.map((movie) => (
                     <FavouriteMovie key={movie.imdbID} movie={movie}
-                    removeFavourite={props.removeFavourite} />
+                    removeFavourite={props.removeFavourite}
+                    showModal={props.showModal} 
+                    />
                 ))}
                 
             </ul>): (
