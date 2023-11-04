@@ -1,3 +1,4 @@
+import FavouriteMovie from "./FavouriteMovie"
 function FavouritesList(props) {
     return (
         <div>
@@ -6,7 +7,7 @@ function FavouritesList(props) {
                 {props.favourites.map((movie) => (
                     <FavouriteMovie key={movie.imdbID} movie={movie} />
                 ))}
-                <button onClick={() => props.deleteFavourite(favourite)}>Delete</button>
+                
             </ul>
         </div>
     )
