@@ -3,6 +3,7 @@ import './App.css';
 import SearchMovies from './SearchMovies';
 import { useState } from'react';
 import FavouritesList from './FavouritesList';
+import MovieModal from './MovieModal';
 
 function App() {
   const [favourites, setFavourites] = useState([]); //state of favourites movies in an array
@@ -22,6 +23,12 @@ function App() {
     setIsModalOpen(true);
     setSelectedMovie(movie);
   }
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedMovie(null);
+  }
+
   return (
     <div className="App">
       <SearchMovies addFavourite={addFavourite}/>
@@ -29,6 +36,11 @@ function App() {
       removeFavourite={removeFavourite}
       showModal={showModal}
       />
+      {selectedMovie && (
+      <MovieModal isModalOpen={isModalOpen} 
+      movie={selectedMovie}
+      closeModal={closeModal} 
+      />)}
     </div>
   );
 }
