@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
+import './styles.css';
 import SearchMovies from './SearchMovies';
 import { useState } from'react';
 import FavouritesList from './FavouritesList';
